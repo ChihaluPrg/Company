@@ -1,0 +1,32 @@
+html {
+    font-size: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: ;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .logo {
+        
+    }
+
+    .header {
+        padding: 20px;
+    }
+    
+    .mv {
+        display: flex;
+        background-size: cover;
+        background-image: url(img/pc_bg_mv.png);
+    }
+}
