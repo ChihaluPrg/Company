@@ -1,32 +1,113 @@
+@charset 'UTF-8';
+
 html {
-    font-size: 10px;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", Meiryo, sans-serif;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-family: ;
+  text-decoration: none;
+  color: black;
 }
 
+.logo {
+  width: 30%;
+}
 
+.mv {
+  background-image: url(img/sp/sp_mv.jpg);
+  height: 460px;
+}
+
+.nav {
+  background-color: #dd1b57;
+  position: fixed;
+  height: 100%;
+  padding: 60px 50px 0px 20px;
+  right: 0;
+  top: 0;
+}
+
+.list-a {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.ul-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
 
 @media (min-width: 768px) {
+  .logo {
+    width: 100%;
+    height: auto;
+  }
 
-    .logo {
-        
-    }
+  .header {
+    display: flex;
+    padding: 25px 70px;
+  }
 
-    .header {
-        padding: 20px;
-    }
-    
-    .mv {
-        display: flex;
-        background-size: cover;
-        background-image: url(img/pc_bg_mv.png);
-    }
+  .nav {
+    display: block;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: transparent; /* PC版ではnavの背景を消す */
+  }
+
+  .ul-items {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    column-gap: 30px;
+    font-size: 1.7rem;
+    flex-direction: row;
+  }
+
+  .list-a {
+    color: black;
+  }
+
+  .mv {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-image: url(img/pc_bg_mv.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px;
+    align-items: center;
+  }
+
+  .mv__titleArea {
+    text-align: center;
+  }
+
+  .mv_title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+  }
+
+  .subtitle {
+    line-height: 1;
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
 }
