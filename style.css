@@ -18,13 +18,12 @@ a {
   color: black;
 }
 
-.logo {
-  width: 30%;
+.header {
+  padding: 20px 25px;
 }
 
-.mv {
-  background-image: url(img/sp/sp_mv.jpg);
-  height: 460px;
+.logo {
+  width: 17%;
 }
 
 .nav {
@@ -34,6 +33,7 @@ a {
   padding: 60px 50px 0px 20px;
   right: 0;
   top: 0;
+  box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
 }
 
 .list-a {
@@ -48,33 +48,56 @@ a {
   row-gap: 20px;
 }
 
+.mv {
+  background-image: url(img/sp/sp_mv.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.mv_title {
+  text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+  font-size: 8rem;
+  align-items: center;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
 @media (min-width: 768px) {
   .logo {
     width: 100%;
-    height: auto;
   }
 
   .header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 25px 70px;
   }
 
   .nav {
-    display: block;
-    align-items: center;
     padding: 0;
-    margin: 0;
     position: relative;
     background-color: transparent; /* PC版ではnavの背景を消す */
   }
 
   .ul-items {
     display: flex;
-    padding: 0;
     margin: 0;
     column-gap: 30px;
     font-size: 1.7rem;
     flex-direction: row;
+    white-space: nowrap;
   }
 
   .list-a {
