@@ -26,14 +26,78 @@ a {
   width: 17%;
 }
 
-.nav {
+#home {
+  opacity: 0.6;
+}
+
+#nav {
+  display: block;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  background-color: #dd1b57;
+  position: fixed;
+  height: 100%;
+  padding: 60px 50px 0px 20px;
+  right: -10px;
+  top: 0;
+}
+
+.togglebtn {
+  position: absolute;
+  cursor: pointer;
+  top: 25px;
+  right: 15px;
+  width: 30px;
+}
+
+.togglebtn span {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: #dd1b57;
+  transition: all 0.5s;
+}
+
+.togglebtn span:nth-child(1) {
+  top: 4px;
+}
+
+.togglebtn span:nth-child(2) {
+  top: 14px;
+}
+
+.togglebtn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.open .togglebtn span {
+  background-color: #ffffff;
+}
+
+.open #nav {
+  display: block;
+  transform: translateX(0);
+  transition: all 0.3s;
   background-color: #dd1b57;
   position: fixed;
   height: 100%;
   padding: 60px 50px 0px 20px;
   right: 0;
   top: 0;
-  box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
+}
+
+.open .togglebtn span:nth-child(1) {
+  opacity: 0;
+}
+
+.open .togglebtn span:nth-child(2) {
+  transform: rotate(-45deg) translateX(15px);
+}
+
+.open .togglebtn span:nth-child(3) {
+  transform: rotate(45deg)translateX(15px);
 }
 
 .list-a {
@@ -59,6 +123,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  margin-bottom: 35px;
 }
 
 .mv_title {
@@ -73,9 +138,134 @@ a {
   font-size: 2rem;
 }
 
+.news {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Top-title {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #dd1b57;
+}
+
+.news-ul {
+  padding: 0;
+}
+
+.news-list-date {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.news-title {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.news-item-list {
+  margin: 20px 0;
+  border-bottom: 1px rgb(199, 199, 199) solid;
+}
+
+.news-click .news-list-link:nth-child(1) {
+  color: #dd1b57;
+}
+
+.service {
+  margin-top: 25px;
+  padding: 0 20px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  padding-top: 15px;
+}
+
+.service-list-item {
+  background-color: #ffffff;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 21px rgba(0, 0, 0, 0.16);
+}
+
+.service-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #dd1b57;
+}
+
+.service-heading::before {
+  content: "SERVICE";
+  color: #f2f2f2;
+  font-size: 7rem;
+  top: 97rem;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+
+.service-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.service-item-subtitle {
+  padding-left: 30px;
+  font-size: 1.3rem;
+  text-align: left; /* テキストを左寄せ */
+  width: 100%; /* 幅を100%にすることで、全体が左寄せされる */
+}
+
+.footer {
+  background-color: #dd1b57;
+  margin-top: 60px;
+  padding: 25px 0;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+.footer-list-item {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.footer-list-item ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+  padding: 0;
+}
+
+.footer-list-item ul li a {
+  color: #ffffff;
+}
+
+.copylight .copylight-p {
+  font-size: 1.3rem;
+  padding: 3px 0;
+}
+
 @media (min-width: 768px) {
   .logo {
     width: 100%;
+  }
+
+  .open #nav {
+    background-color: transparent;
+  }
+
+  #home {
+    opacity: 1;
+    color: #dd1b57;
   }
 
   .header {
@@ -85,10 +275,19 @@ a {
     padding: 25px 70px;
   }
 
-  .nav {
+  .btn-menu {
+    display: none;
+  }
+
+  #nav {
+    transform: translateX(0);
     padding: 0;
     position: relative;
     background-color: transparent; /* PC版ではnavの背景を消す */
+  }
+
+  .togglebtn {
+    display: none;
   }
 
   .ul-items {
@@ -133,4 +332,42 @@ a {
     color: #ffffff;
     font-size: 2.5rem;
   }
+
+  .news {
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .Top-title {
+    white-space: nowrap;
+  }
+
+  .news-item-list:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .service-list {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-list-item {
+    background-color: #ffffff;
+  }
+
+  .service-heading::before {
+    top: 97rem;
+    font-size: 16rem;
+    z-index: -10;
+  }
+
+  .footer {
+    margin-top: 100px;
+    padding: 45px 50px;
+  }
+
 }

@@ -14,19 +14,27 @@
     />
     <title>START</title>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <a href="#"><img src="/img/logo.svg" alt="" /></a>
       </div>
-      <div class="nav">
-        <ul class="ul-items">
-          <li class="list-item"><a class="list-a" href="#">ホーム</a></li>
-          <li class="list-item"><a class="list-a" href="#">メッセージ</a></li>
-          <li class="list-item"><a class="list-a" href="#">会社概要</a></li>
-        </ul>
+      <div id="navArea">
+        <div id="nav">
+          <ul class="ul-items">
+            <li class="list-item">
+              <a id="home" class="list-a" href="#">ホーム</a>
+            </li>
+            <li class="list-item"><a class="list-a" href="html/message.html">メッセージ</a></li>
+            <li class="list-item"><a class="list-a" href="#">会社概要</a></li>
+          </ul>
+        </div>
+        <div class="togglebtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -36,5 +44,101 @@
         <div class="subtitle">仕事に最高のスタートを</div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="news">
+        <div class="Top-title">
+          <p>ニュース</p>
+        </div>
+        <ul class="news-ul">
+          <li class="news-item-list">
+            <a href="#" class="news-list-link">
+              <div class="news-list-date">
+                <time datetime="2030-02-10" class="news-time">2030.02.10</time>
+              </div>
+              <div class="news-title">
+                コーポレートサイトをリニューアルしました。
+              </div>
+            </a>
+          </li>
+          <li class="news-item-list">
+            <a href="#" class="news-list-link">
+              <div class="news-list-date">
+                <time datetime="2030-02-08" class="news-time">2030.02.08</time>
+              </div>
+              <div class="news-title">採用強化中です！一緒に働きませんか？</div>
+            </a>
+          </li>
+          <li class="news-item-list">
+            <a href="#" class="news-list-link">
+              <div class="news-list-date">
+                <time datetime="2030-02-02" class="news-time">2030.02.02</time>
+              </div>
+              <div class="news-title">
+                人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-heading">
+        <p>サービス</p>
+      </div>
+      <div class="service-list">
+        <div class="service-list-item">
+          <figure class="service-list__img-wrapper" >
+            <img src="img/work_black_24dp.png" alt="">
+          </figure>
+          <div class="service-item-title">
+            <p>人材紹介業</p>
+          </div>
+          <div class="service-item-subtitle">
+            <p>新規サイトの制作はもちろんサイトリニューアルやライティングページの制作も可能です。</p>
+          </div>
+        </div>
+        <div class="service-list-item">
+          <figure class="service-list__img-wrapper" >
+            <img src="img/location_city_black_24dp.png" alt="">
+          </figure>
+          <div class="service-item-title">
+            <p>スクール事業</p>
+          </div>
+          <div class="service-item-subtitle">
+            <p>オンラインでWeb制作を学べるスクールを運営しています。</p>
+          </div>
+        </div>
+        <div class="service-list-item">
+          <figure class="service-list__img-wrapper" >
+            <img src="img/media.png" alt="">
+          </figure>
+          <div class="service-item-title">
+            <p>Webメディア運営</p>
+          </div>
+          <div class="service-item-subtitle">
+            <p>人事系メディアやWebデザイン関連のメディアなどを複数運営しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-list">
+        <div class="footer-list-item">
+          <ul>
+            <li class="footer-li"><a href="#">ホーム</a></li>
+            <li class="footer-li"><a href="#">メッセージ</a></li>
+            <li class="footer-li"><a href="#">会社概要</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copylight">
+        <p class="copylight-p">©START</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
